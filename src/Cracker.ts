@@ -4,7 +4,6 @@ import Rsa from "./Rsa";
 
 export default class Cracker {
   private static fermatFactors(n: number) {
-    console.log(n);
     let a = Math.ceil(Math.sqrt(n));
     let b2 = a ** 2 - n;
     while (Math.ceil(Math.sqrt(b2)) ** 2 !== b2) {

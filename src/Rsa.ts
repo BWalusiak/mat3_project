@@ -40,8 +40,6 @@ export default class Rsa {
       lambda = bigInt.lcm(p.minus(1), q.minus(1));
     } while (bigInt.gcd(e, lambda).notEquals(1) || p.minus(q).abs().shiftRight(size / 2 - 100).isZero());
 
-    console.log(p, q);
-
     return {
       n: p.multiply(q),
       e: e,
